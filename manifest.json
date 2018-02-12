@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Demo Tickets",
+  "version": "0.1.0",
+
+  "default_locale": "en",
+  "description": "An extension that assists in running tech demo's of scrum tickets.",
+
+  "browser_action": {
+    "default_title": "Demo Tickets",
+    "default_popup": "dist/popup.html"
+  }
+}
