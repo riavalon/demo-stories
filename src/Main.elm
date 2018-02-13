@@ -1,31 +1,17 @@
 module Main exposing (..)
 
-import Html exposing (..)
+-- PACKAGES
+
+import Html exposing (Html)
 
 
-type alias Model =
-    String
+-- SRC
 
-
-init : ( Model, Cmd Msg )
-init =
-    ( "Hello, world!", Cmd.none )
-
-
-type Msg
-    = NoOp
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg of
-        NoOp ->
-            ( model, Cmd.none )
-
-
-view : Model -> Html Msg
-view model =
-    text model
+import Core.Init exposing (init)
+import Core.Update exposing (update)
+import Core.View exposing (view)
+import Core.Subscriptions exposing (subscriptions)
+import Shared.Types exposing (Model, Msg)
 
 
 main : Program Never Model Msg
@@ -34,5 +20,5 @@ main =
         { init = init
         , view = view
         , update = update
-        , subscriptions = always Sub.none
+        , subscriptions = subscriptions
         }

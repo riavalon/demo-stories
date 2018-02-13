@@ -3,7 +3,9 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    app: [ './src/index.js' ],
+    app: [
+      './src/index.js',
+    ],
   },
 
   output: {
@@ -39,24 +41,18 @@ module.exports = {
       },
 
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [{
             loader: 'style-loader',
           }, {
             loader: 'css-loader',
+          }, {
+            loader: 'sass-loader',
           }
         ]
       },
-
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        loader: 'style-loader!css-loader!sass-loader'
-      }
     ],
-
-    noParse: /\.elm$/
   },
 
   devServer: {

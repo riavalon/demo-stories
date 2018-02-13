@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --port 5235"
+    "build": "webpack --watch --colors",
+    "watch": "live-server dist",
+    "start": "nf start"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -14,7 +15,10 @@
     "css-loader": "^0.28.9",
     "elm-webpack-loader": "^4.4.0",
     "file-loader": "^1.1.6",
+    "foreman": "^2.0.0",
+    "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
+    "normalize-css": "^2.3.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "tachyons": "4.9.1",

@@ -1,3 +1,4 @@
+@import '~normalize-css/normalize.css';
 @import '~basscss-align/css/align.css';
 @import '~basscss-border/css/border.css';
 @import '~basscss-flexbox/css/flexbox.css';
@@ -11,3 +12,5 @@
 @import '~basscss-typography/css/typography.css';
 @import '~basscss/css/basscss.min.css';
 @import '~tachyons/css/tachyons.min.css';
+
+@import './Header/popup.scss';

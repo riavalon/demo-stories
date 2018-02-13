@@ -1,0 +1,13 @@
+$header-height: 4vh;
+$header-min-height: 3rem;
+$demo-list: 96vh;
+
+
+.demo-header {
+  height: $header-height;
+  min-height: $header-min-height;
+}
+
+.demo-list {
+  height: $demo-list;
+}

@@ -1,7 +1,7 @@
 'use strict';
 
 
-require('./main.css');
+require('./main.scss');
 require('./popup.html');
 
 
