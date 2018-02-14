@@ -3,14 +3,17 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    app: [
-      './src/index.js',
+    popup: [
+      './src/Popup/index.js',
+    ],
+    content: [
+      './src/Content/index.js',
     ],
   },
 
   output: {
     path: path.resolve(__dirname + '/dist'),
-    filename: '[name].js',
+    filename: 'js/[name].js',
   },
 
   module: {
@@ -18,26 +21,22 @@ module.exports = {
       {
         test: /\.elm$/,
         exclude: [/node_modules/, /elm-stuff/],
-        loader: 'elm-webpack-loader?verbose=true&warn=true'
+        loader: 'elm-webpack-loader?verbose=true&warn=true',
+        options: {
+          pathToMake: '/usr/local/bin/elm-make',
+        },
       },
 
       {
-        test: /\.html$/,
-        exclude: /node_modules/,
+        test: /\.js$/,
+        exclude: [/node_modules/, /elm-stuff/],
+        loader: 'babel-loader',
+      },
+
+      {
+        test: /\.(html|json|png)$/,
+        exclude: [/node_modules/, /elm-stuff/],
         loader: 'file-loader?name=[name].[ext]',
-      },
-
-      {
-        test: /\.(jpg|png|gif)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            },
-          },
-        ],
       },
 
       {
