@@ -11,8 +11,6 @@ export default class DemoBuilder {
 
   init() {
     console.log('%cStarting demo creation workflow...', 'background:#008aff;color:white');
-    this._showControls();
-    this.recordNextStep();
   }
 
   selectElement() {
@@ -52,8 +50,10 @@ export default class DemoBuilder {
   _showControls() {
     const nextStep = document.createElement('button');
     nextStep.setAttribute('id', 'dtb-next-step-button');
+    nextStep.textContent = 'Next Step';
     const finishBuilding = document.createElement('button');
     finishBuilding.setAttribute('id', 'dtb-finish-demo-button');
+    finishBuilding.textContent = 'Finish Building';
     const controlsContainer = document.createElement('div');
     controlsContainer.setAttribute('id', 'dtb-controls-container');
 
@@ -62,12 +62,12 @@ export default class DemoBuilder {
       e => this._cleanUp(),
       () => document.removeChild(finishBuilding)
     );
-    finishBuilding.addEventListner(
+    finishBuilding.addEventListener(
       finishBuildingEvent.type,
       finishBuildingEvent.fn
     );
 
-    const nextStepEvent = new DemoListner(
+    const nextStepEvent = new DemoListener(
       'click',
       e => this.recordNextStep(),
       () => document.removeChild(nextStep)
@@ -82,5 +82,7 @@ export default class DemoBuilder {
 
     controlsContainer.appendChild(nextStep);
     controlsContainer.appendChild(finishBuilding);
+
+    document.body.appendChild(controlsContainer);
   }
 }

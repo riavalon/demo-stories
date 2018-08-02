@@ -4,7 +4,6 @@ module Main exposing (..)
 
 import Navigation
 
-
 -- SRC
 
 import Core.Init exposing (init)

@@ -5,7 +5,7 @@
     "license": "BSD3",
     "source-directories": [
         "src/Popup",
-        "src/Content"
+        "src/Wizard"
     ],
     "exposed-modules": [],
     "dependencies": {

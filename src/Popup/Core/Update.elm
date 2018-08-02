@@ -27,7 +27,7 @@ update msg model =
                 ( { model | route = newRoute }, Cmd.none )
 
         StartDemoBuilder ->
-            ( model, startDemoBuilder "start_demo" )
+            ( model, ( startDemoBuilder "start_demo" ) )
 
         CreateNewDemo ->
             ( Model

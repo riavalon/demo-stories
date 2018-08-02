@@ -13,6 +13,7 @@ const Elm = require('./Main.elm');
 
 document.addEventListener('DOMContentLoaded', function() {
   let mount, app;
+
   setTimeout(() => {
     mount = document.getElementById('main');
     app = Elm.Main.embed(mount);

@@ -4,7 +4,7 @@ require('./main.scss');
 
 import Builder from './js/build-demo';
 
-var Elm = require('./Main.elm');
+
 var builder = new Builder();
 
 

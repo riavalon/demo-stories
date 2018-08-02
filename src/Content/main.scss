@@ -1,0 +1,26 @@
+#dtb-controls-container {
+  background: #333;
+  padding: 10px 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  border-radius: 5px;
+
+  #dtb-next-step-button,
+  #dtb-finish-demo-button {
+    border: 0;
+    border-radius: 2px;
+    background: #f1f1f1;
+    color: #222;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+}

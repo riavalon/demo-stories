@@ -3,12 +3,19 @@ var path = require('path');
 
 module.exports = {
   entry: {
+
     popup: [
       './src/Popup/index.js',
     ],
+
     content: [
       './src/Content/index.js',
     ],
+
+    wizard: [
+      './src/Wizard/index.js',
+    ],
+
   },
 
   output: {
