@@ -3,11 +3,30 @@
   "name": "Demo Tickets",
   "version": "0.1.0",
 
-  "default_locale": "en",
   "description": "Practice Elm project",
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 
   "browser_action": {
     "default_title": "Demo Tickets",
-    "default_popup": "dist/popup.html"
-  }
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "demo_tickets_icon_16.png",
+    "48": "demo_tickets_icon_48.png",
+    "128": "demo_tickets_icon_128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
 }

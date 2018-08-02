@@ -11,3 +11,8 @@ $demo-list: 96vh;
 .demo-list {
   height: $demo-list;
 }
+
+.no-outline:focus,
+.no-outline:active {
+  outline: none;
+}
